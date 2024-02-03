@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base_settings/css/base.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="nav-1">
+            <div class="mail">
+                <img src="{% static 'base_settings/img/email-white.png' %}" alt="">
+                <p>mail@gmail.com</p>
+            </div>
+            <div class="contacts">
+                <a href=""><img src="{% static 'base_settings/img/git.png' %}" alt=""></a>
+                <a href=""><img src="{% static 'base_settings/img/inst.png' %}" alt=""></a>
+                <a href=""><img src="{% static 'base_settings/img/tel.png' %}" alt=""></a>
+            </div>
+        </nav>
+        <nav class="nav-2">
+            <img src="{% static 'base_settings/img/logo.png' %}" alt="">
+            <ul>
+                <li class="link">Calculation of <br>the tenant</li>
+                <li class="link">Cost <br>accounting</li>
+                <li class="link">Tenant <br>agreements</li>
+                <li class="link">New <br>tenant</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        <h1>hello</h1>
+        {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
