@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     {% load static %}
+    {% block links %}
+    {% endblock %}
     <link rel="stylesheet" href="{% static 'base_settings/css/base.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,18 +26,19 @@
             </div>
         </nav>
         <nav class="nav-2">
-            <img src="{% static 'base_settings/img/logo.png' %}" alt="">
+            <a href="{% url 'main' %}">
+                <img src="{% static 'base_settings/img/logo.png' %}" alt="">
+            </a>
             <ul>
                 <li class="link">Calculation of <br>the tenant</li>
-                <li class="link">Cost <br>accounting</li>
+                <li class="link"><a href="{% url 'cost_accout' %}">Cost <br>accounting</a></li>
                 <li class="link">Tenant <br>agreements</li>
-                <li class="link">New <br>tenant</li>
+                <li class="link"><a href="{% url 'new_tenant' %}">New <br>tenant</a></li>
             </ul>
         </nav>
     </header>
     <main>
         {% block content %}
-        <h1>hello</h1>
         {% endblock %}
     </main>
     <footer>

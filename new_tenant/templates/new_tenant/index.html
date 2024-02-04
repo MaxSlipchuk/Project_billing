@@ -1,0 +1,32 @@
+{% extends 'base_settings/base.html' %}
+{% load static %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'new_tenant/css/style.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<img class="background" src="{% static 'new_tenant/img/background-1.png' %}" alt="">
+<div class="container">
+    <div class="choice">
+        <button>New tenant</button>
+        <button>Login</button>
+    </div>
+    <form action="" method="POST">
+        <h1>Input the data of the tenant</h1>
+        {% csrf_token %}
+        <input type="text" id="first-name" placeholder="First name">
+        <!-- <label for="first-name">First name</label> -->
+        <input type="text" id = 'second-name' placeholder="Second name">
+        <!-- <label for="second-name">Second name</label> -->
+        <input type="text" id = 'login' placeholder="Login">
+        <!-- <label for="login">Login</label> -->
+        <input type="text" id ='password' placeholder="Pssword">
+        <!-- <label for="password">Password</label> -->
+        <input type="text" id="confirm" placeholder="Confirm password">
+        <!-- <label for="confirm">Confirm password</label> -->
+        <button type="submit">finish</button>
+    </form>
+</div>
+{% endblock %}

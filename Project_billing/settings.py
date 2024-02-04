@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'cost_accouting',
     'creating_calculation',
     'new_tenant',
-    'tenant_agreement'
+    'tenant_agreement',
+    'main_page'
 ]
 
 MIDDLEWARE = [
