@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30vw;
+    height: 35vw;
     flex-direction: column;
 }
 
@@ -30,14 +30,13 @@
     border: none;
     font-size: 22px;
     cursor: pointer;
-    /* font-family: 'Archivo Black', sans-serif; */
 }
 
 form{
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
     width: 40%;
-    height: 70%;
+    height: 90%;
     border: 2px solid orange;
     display: flex;
     flex-direction: column;
@@ -58,8 +57,9 @@ form h1{
 form input{
     width: 80%;
     height: 10%;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 0 10px;
+    background-color: transparent;
 }
 
 form button{

@@ -19,13 +19,14 @@ from django.urls import path
 from .settings import MEDIA_URL, MEDIA_ROOT, DEBUG
 from django.conf.urls.static import static
 from base_settings.views import base
-from new_tenant.views import new_tenant
+from new_tenant.views import registration_view
 from main_page.views import main
 from cost_accouting.views import cost_accout
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('new_tenant', new_tenant, name='new_tenant'),
+    # path('new_tenant', new_tenant, name='new_tenant'),
+    path('registration/', registration_view, name='registration'),
     path('', main, name='main'),
     path("cost_accout/", cost_accout, name="cost_accout"),
 ]
